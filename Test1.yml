@@ -2,3 +2,6 @@
   tasks:
     - name: install apache2
       yum: name=httpd state=latest
+handlers:
+    - name: restart apache
+      service: name=httpd state=restarted

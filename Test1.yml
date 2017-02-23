@@ -1,0 +1,15 @@
+---
+- name install and start apache
+	hosts: test
+	vars:
+		http_port: 80
+		max_clients: 200
+	remote_user: root
+
+	tasks:
+- name install httpd
+	yum pkg=httpd state=latest
+-name: write the apache config file
+	template: src=/src/httpd.jz dest=/etc/httpd.conf
+-name start
+	service: name=httpd state=started

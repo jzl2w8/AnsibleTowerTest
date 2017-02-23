@@ -1,5 +1,5 @@
 - name install and start apache
-	hosts: Test01
+	hosts: 192.168.71.130
 	vars:
 		http_port: 80
 		max_clients: 200

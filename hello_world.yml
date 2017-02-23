@@ -7,4 +7,3 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: install httpd

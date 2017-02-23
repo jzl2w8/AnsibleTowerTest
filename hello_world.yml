@@ -7,5 +7,3 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: install httpd
-        yum pkg=httpd state=latest

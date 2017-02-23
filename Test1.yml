@@ -2,6 +2,10 @@
   tasks:
     - name: install apache2
       yum: name=httpd state=latest
-handlers:
+     notify:
+    - restart apache
+  - name: ensure apache is running (and enable it at boot)
+    service: name=httpd state=started enabled=yes
+  handlers:
     - name: restart apache
       service: name=httpd state=restarted

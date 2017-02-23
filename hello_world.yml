@@ -4,6 +4,4 @@
     http_port: 80
     max_clients: 200
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+    yum pkg=httpd state=latest
